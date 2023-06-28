@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:uber_front/components/image_component.dart';
 import 'package:uber_front/constants/app_icons.dart';
 import 'package:uber_front/constants/app_images.dart';
+import 'package:uber_front/screens/home_screen.dart';
 import 'package:uber_front/screens/signup_screen.dart';
 
 import '../components/icon_component.dart';
@@ -66,7 +67,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(
                           width: double.infinity,
-                          child: ElevatedButton(onPressed: (){}, child: Text("Login", textAlign: TextAlign.center,)),
+                          child: ElevatedButton(onPressed: (){
+                            Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) => const HomeScreen()
+                                )
+                            );
+                          }, child: Text("Login", textAlign: TextAlign.center,)),
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,11 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             const SizedBox(height: 10),
                             TextButton(onPressed: (){
-                              Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (context) => const SignupScreen()
-                                  )
-                              );
+
                             },
                                 child: const Text.rich(
 

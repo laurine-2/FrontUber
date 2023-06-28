@@ -97,7 +97,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           SizedBox(
                             width: double.infinity,
                             child: OutlinedButton.icon(
-                                icon: Image(image: AssetImage("assets/images/Google.jpg"),width: 2),
+                                icon: Image(image: AssetImage("assets/images/Google.png"),width: 2),
                                 onPressed: (){},
                                 label: Text("Signup with google")
                             ),
